@@ -7,4 +7,4 @@ elif num==0:
 else:
 	for i in range(1,num+1):
 		f=f*i
-print(f)
+        print(f)
