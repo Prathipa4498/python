@@ -1,6 +1,6 @@
 lw=int(input())
 up=int(input())
-for num in range(lw,up + 1):
+for num in range(lw,up):
    order = len(str(num))
    sum = 0
    temp = num
