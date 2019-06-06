@@ -1,21 +1,54 @@
 s=int(input())
-n1,n2=[],[]
+M=[]
 c=0
-for i in range(0,n):
-  n1.append(list(map(int,input().split())))
-for i in range(0,s+2):
-  if i==0:
-    n2.append([0]*(s+2))
-  elif i==(s+2)-1:
-    n2.append([0]*(s+2))
-  else:
-    n2.append([0]+n1[i-1]+[0])
-for i in range(0,len(n2)):
-  for j in range(0,len(n2)):
-    if n2[i][j]!=0 and n%2==0:
-      if n2[i-1][j-1]==0 and n2[i-1][j]==0 and n2[i-1][j+1]==0 and n2[i][j-1]==0 and n2[i][j+1]==0 and n2[i+1][j-1]==0 and n2[i+1][j]==0 and n2[i+1][j+1]==0:
-        c+=1
-    elif n2[i][j]!=0 and n%2!=0:
-      if n2[i-1][j]==0 and n2[i+1][j]==0 and n2[i][j-1]==0 and n2[i][j+1]==0:
-        c+=1
+for i in range(n):
+  M.append(list(map(int,input().split())))
+f=0
+for i in range(len(M)):
+  for j in range(len(M[0])):
+    f=0
+    if M[i][j]==1:
+      try:
+        if M[abs(i-1)][j]==0:
+          f+=1
+      except IndexError:
+        f+=1
+      try:
+        if M[i+1][j]==0:
+          f+=1
+      except IndexError:
+        f+=1
+      try:
+        if M[i][abs(j-1)]==0:
+          f+=1
+      except IndexError:
+        f+=1
+      try:
+        if M[i][j+1]==0:
+          f+=1
+      except IndexError:
+        f+=1
+      try:
+        if M[abs(i-1)][abs(j-1)]==0:
+          f+=1
+      except IndexError:
+        f+=1
+      try:
+        if M[abs(i-1)][j+1]==0:
+          f+=1
+      except IndexError:
+        f+=1
+      try:
+        if M[i+1][abs(j-1)]==0:
+          f+=1
+      except IndexError:
+        f+=1
+      try:
+        if M[i+1][j+1]==0:
+          f+=1
+      except IndexError:
+        f+=1
+    if f==8:
+      c+=1
+
 print(c)
