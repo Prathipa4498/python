@@ -1,2 +1,2 @@
-str=input()
-print(str.title())
+word33=input()
+print(word33.title())
