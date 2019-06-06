@@ -1,6 +1,6 @@
-s=int(input())
-b=input().split()
-for i in b:
-    if b.count(i)==1:
-        print(i)
-        break
+np1=int(input())
+values=list(map(int,input().split()))
+for i in values:
+  if(values.count(i)==1):
+    print(i)
+    break
