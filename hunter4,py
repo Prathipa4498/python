@@ -1,5 +1,6 @@
-p=int(input())
-a=input().split()
-for i in a:
-	if a.count(i)==1:
-		print(i)
+s=int(input())
+b=input().split()
+for i in b:
+    if b.count(i)==1:
+        print(i)
+        break
