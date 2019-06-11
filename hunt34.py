@@ -1,12 +1,12 @@
 n,k=map(int,input().split())
-l=[]
+lt=[]
 cost=0
 for i in range(n):
-    l.append(input())
+    lt.append(input())
 for i in range(n):
     for j in range(k-1):
-        if l[i][j]=="R" and l[i][j+1]=="R":
-            cost=coost+5
-        elif l[i][j]=="G" and l[i][j+1]=="G":
+        if lt[i][j]=="R" and lt[i][j+1]=="R":
+            cost=cost+5
+        elif lt[i][j]=="G" and lt[i][j+1]=="G":
             cost=cost+3
-print(c)
+print(cost)
