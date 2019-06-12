@@ -1,8 +1,8 @@
-num=int(input())
+w=int(input())
 m=[]
 k=bin(2**n-1)[2::]
 l=len(k)
-for i in range(0,2**num):
+for i in range(0,2**w):
 	s=bin(i)[2::]
 	if len(s)<l:
 		m.append([s.count("1"),(l-len(s))*"0"+s])
